@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class Main {
     // Clase Main para llamar a las clases recursivas
     public static void main(String[] args) {
+        // CREA LOS OBJETOS PARA USAR LOS METODOS DE LAS CLASES
         SumaNumerosNaturales Ejercicio1 = new SumaNumerosNaturales();
         ImprimirNumeros Ejercicio2 = new ImprimirNumeros();
         ImprimirNumerosInverso Ejercicio3 = new ImprimirNumerosInverso();
@@ -10,8 +11,11 @@ public class Main {
         Fibonacci Ejercicio6 = new Fibonacci();
 
         int menu = 0;
+        // INICIA EL MENU
         System.out.println("Menu");
+        // MIENTRAS EL MENU SEA IGUAL A 0, SE EJECUTA EL MENU
         while(menu==0){
+            // IMPRIME EL MENU
             System.out.println("1. Suma de numeros naturales");
             System.out.println("2. Imprimir numeros");
             System.out.println("3. Imprimir numeros inverso");
@@ -22,7 +26,9 @@ public class Main {
             System.out.println("Ingrese una opcion");
             menu = new Scanner(System.in).nextInt();
 
+            // UTILIZA UN MENU A BASE DE SWITCH PARA ELEGIR EL EJERCICIO
             switch(menu){
+                // EN CASO DE QUE LA OPCION SEA 1, SE EJECUTA EL EJERCICIO 1 Y ASI DEPENDIENDO EL CASO
                 case 1:
                     Ejercicio1.llamadaSumaNumerosNaturales();
                     break;
@@ -49,13 +55,13 @@ public class Main {
                     break;
             }
             System.out.println("\n");
-
+            // PREGUNTA SI DESEA CONTINUAR
             System.out.println("Desea continuar");
             System.out.println("1. Si");
             System.out.println("2. No");
             int decision = 0;
             decision = new Scanner(System.in).nextInt();
-
+            // SI LA DECISION ES 2, SE SALE DEL MENU SI NO ES EL CASO CONTINUA
             if(decision==2){
                 menu = 1;
             }else if(decision==1){
